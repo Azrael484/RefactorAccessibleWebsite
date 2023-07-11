@@ -1,1 +1,2 @@
-# RefactorAccessibleWebsite
+
+[MIT](https://choosealicense.com/licenses/mit/)

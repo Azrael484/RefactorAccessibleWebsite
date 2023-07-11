@@ -1,0 +1,179 @@
+/*Universal Selector: These stylings apply to all elements of the page unless otherwise specified below*/
+
+* {
+    /*For each box in the layout, the padding and the margin will be included within the stipulated width and height*/
+    box-sizing: border-box; 
+    /*The default padding and margin of each box will be 0 pixels*/
+    padding: 0;
+    margin: 0;
+    /*The default color for the text will be white*/
+    color:#ffffff;
+    /*No text will be underlined, overlined, etc.*/
+    text-decoration:none;
+    /*The default font family fo the rendering of the text. This property will be applied in the main content and the aside detailing the benefits*/
+
+    font: 20px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Element selector: Sets the back-ground color for the page*/
+
+body {
+    background-color: #d9dcd6;
+}
+
+/*Class selector: Indicates the font family from which the browser will choose a fon to render the text in the header and footer areas*/
+
+.fontfam {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+/*Element selector: Gives the styling for the header section of the page: its padding (different from default), the preferred fonts for the text (in order, with a generic fon as fall-back), 
+  the back-ground color and the text's color*/
+
+header {
+    padding: 20px;
+    background-color: #2a607c;
+}
+
+/*Element selector: Stipulates the style given to the heading/title of the header section (i.e., the company's name)*/
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/*Element selector: Determines the color of the portion of text in the heading delimited by the span element (in this case, "seo", shorthand for "Search Engine Optimization")*/
+
+header h1 span {
+    color: #d9dcd6;
+    font-size: inherit;
+}
+
+/*Element selector: Determines the properties of the navigation bar within the header: top padding of 25pixels; a margin to the right of the nav bar of 20pixels; 
+  that the nav bar has to be placed to the right of the header; that the preferred font is 'Gill Sans' with sans-serif as the fall-back; that the size of the font is 20pixels;
+  and, that the options in the bar be listed without ranking and without markings e.g., bullet points)*/
+
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    list-style-type: none;
+   
+}
+
+/*Element selector: Says that the boxes corresponding to the options in the nav bar have to be arranged in a single line within the header,
+  leaving a 25pixels wide margin to the left of each box*/
+
+header nav li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/*Class element: Determines that the figure will be shown in a box of height 800px, with the same width as the viewport (default = 100%), 
+  and that the figure is a photograph (URL provided) that covers the complete area inside the box*/
+
+.hero {
+    height: 800px;
+    margin-bottom: 25px;
+    background-image: url("../images/img3-digital-marketing-meeting.jpg");
+    background-size: cover;
+    text-align: center;
+    font-style:italic;
+}
+
+/*Element selector: Sets the font of the paragphs to be 4/5 of the deault font (in this case, 16px). 
+  This applies to the paragraphs within the boxes in the main section, the aside section and the footer */
+
+p {
+    font-size: .8rem;
+}
+
+/*Class selector: Determines the property values of the boxes that make up the main section of the page (the ones that are linked through the navigation bar links).
+  Each box will have a width equal to 3/4 the size of the viewport width; they will be displayed so as to fill an available line; and there will be a 20 pixels margin to the left.*/
+
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*Element selector: Furnishes the styling to each subsection of the main content area. This includes the size of the bottom margin and the padding for each subsection box; 
+  the height of said box; and, the background-color of the section*/
+
+.content section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    background-color: #0072bb;
+}
+/*Element selector: Dictates that the maximum height of the image corresponding to each subsection of the main content will be 200px*/
+
+.content section img {
+    max-height: 200px;
+}
+
+/*Element selector: Mandates the heading in each subsection of the main content to have a bottom margin of 20px and a fon size of 36px*/
+ 
+.content section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*Class selectors: Indicate whether the image to be shown within each box of the main section will appear to the left side or the right side of the accompanying text (heading + paragraph).*/
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+/*Class selector: Applies to the container of the boxes within the aside section of the document. The right margin will be 20px; the padding in all directions will be 20px;
+  the container box will leave a gap between it and any other box not in the aside section; the whole aside section will be displayed to the right of the screen;
+  the width of the aside section container will be 1/5 of the viewport's width; the aside section will fill all the vertical space(height=100%) left after taking into account 
+  the appropriate margings to be left with respect to the cover figure and footer section; the text will be rendered in one of the specified fonts, arrranged in order of decreasing 
+  preference; and, the back-ground color for the aside section is specified.*/
+
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    background-color: #2589bd;
+}
+
+/*Class selector: Specifies that there must be a 32 pixels margin at the bottom of each box within the aside section*/
+
+.benefits .benefit {
+    margin-bottom: 32px;
+}
+
+/*Class selector: Stipulates that the bottom margin for the box containing the heading of each subsection of the aside section must be 10px and that the text within that box must be centered*/
+.benefits .benefit h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*Element selector: Sets the image associated with each subsection of the aside section to display on a new line by setting the display property to block;
+  the box containing the image will have a 10px margin on each side and the image will be centered within the content area (margin: 10px auto);
+  the maximum width of the box will be 150px, including the margings to the left and right because all the boxes are border-boxes (see the universal selector on top of the stylesheet)*/
+
+.benefits .benefit img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/*Element selector: Assigns the following property values to the footer section (box): a padding of 30px on all sides; to not be adjacent to any other box, leaving a gap;
+  the font-family from which the browser has to choose to render the text; and the alignment (in this case, centralized) of the text within the footer*/
+
+footer {
+    padding: 30px;
+    clear: both;
+    text-align: center;
+}
+
